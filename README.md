@@ -9,7 +9,7 @@ I'm Om Patil, a Computer Engineering student passionate about building intuitive
 
 ## 🌐 Live Website
 
-🔗 [Visit My Portfolio](https://your-username.github.io/your-repo-name/)  
+🔗 [Visit My Portfolio](https://om-patil25.github.io/Portfolio-Website/)  
 *(Replace this with your actual deployed link)*
 
 ## 📁 Features
@@ -44,8 +44,8 @@ cd Portfolio-Website
 
 You can connect with me via:
 
-- [LinkedIn](https://www.linkedin.com/in/your-profile)
-- [GitHub](https://github.com/your-username)
+- [LinkedIn](https://www.linkedin.com/in/om-patil25/)
+- [GitHub](https://github.com/om-patil25)
 
 ---
 
