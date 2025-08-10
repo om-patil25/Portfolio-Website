@@ -1,30 +1,35 @@
-* {
+/* improved Css */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-html {
     font-size: 16px;
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
 p {
     font-size: clamp(1rem, 1.5vw, 1.25rem);
 }
 
-
 body {
     background: #F3E2D4;
     background: linear-gradient(147deg, rgba(243, 226, 212, 1) 2%, rgba(197, 176, 205, 1) 29%, rgba(65, 94, 114, 1) 77%, rgba(23, 49, 62, 1) 92%);
-
     font-family: 'Inter', sans-serif;
+
+}
+
+.flex {
+    display: flex;
 }
 
 h1,
@@ -32,10 +37,6 @@ h2,
 h3 {
     font-family: 'Poppins', sans-serif;
 
-}
-
-.flex {
-    display: flex;
 }
 
 ul {
@@ -91,8 +92,6 @@ a {
     text-shadow: 1px 1px black;
 }
 
-
-
 /* home */
 
 #welcome {
@@ -105,46 +104,53 @@ a {
 .welcBox {
     height: 80vh;
     width: 50%;
+    display: flex;
+}
+
+.Hi {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Hi>* {
+    margin-left: 3vw;
 }
 
 .welcBox>h1 {
     color: #f2e1d4;
-    /* font-size: 7rem; */
     font-size: clamp(1rem, 7vw, 8rem);
-    margin: 9.5rem 9rem 0rem 5rem;
     text-shadow: 0.1rem 0.1rem #222a33;
 }
 
 .welcBox>p {
-    margin: 0px 3rem 3rem 6rem;
     color: #222a33;
     font-size: unset;
+    width: 80%;
+}
+
+
+.terminalBox {
+    justify-content: center;
+    align-items: center;
 }
 
 .terminal {
-    /* height: 51vh; */
     aspect-ratio: 16 / 9;
     width: 38vw;
     background-image: url(imgs/terminal.png);
     background-size: cover;
-    position: absolute;
-    /* top: 21vh; */
-    top: clamp(21vh, 25vh, 27vh);
-    left: 6vw;
     border-radius: 0.8rem;
     box-shadow: 1.7rem 1.7rem 1rem black;
 }
 
 .terminal>p {
     margin: 1rem 1rem 0rem 1rem;
-    /* font-size: 1.7rem; */
     font-size: clamp(1rem, 1.5vw, 1.7rem);
     color: whitesmoke;
 }
 
 .terminal>ul {
     margin: 0rem 1rem;
-    /* font-size: 1.7rem; */
     font-size: clamp(1rem, 1.5vw, 1.7rem);
     color: whitesmoke;
 }
@@ -177,22 +183,21 @@ a {
 }
 
 .scroll_up {
-    height: 6vh;
+    width: 3vw;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    /* width: 3vw; */
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
-    text-align: center;
     background: #e4d3c8;
-    border: 1px solid #000000;
     display: none;
+    overflow: hidden;
 }
 
 .scroll_up>img {
-    height: inherit;
-    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -204,46 +209,47 @@ a {
 }
 
 .sec_head {
-    font-size: 3rem;
     color: #f2e1d4;
     text-shadow: 1px 1px black;
 }
 
 /* about */
 #about {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     overflow: hidden;
+    justify-content: center;
 }
 
 .aboutHead {
-    height: 15%;
+    height: max-content;
     width: 65%;
     text-align: center;
-    margin-top: 7%;
 }
 
 .aboutHead>h1 {
-    font-size: 3rem;
     color: #f2e1d4;
     text-shadow: 1px 1px black;
-    margin: 2rem 0rem;
+    padding: 1rem;
 }
 
 .aboutContent {
-    height: 65%;
+    height: max-content;
     width: 65%;
+    overflow: hidden;
+    padding: 2rem 3rem;
 }
 
 .aboutContent>p {
-    /* font-size: 1rem; */
     color: #162f3b;
-    margin: 1rem 6rem;
+    line-height: 2rem;
 }
 
 .aboutImg {
     height: 100%;
     width: 35%;
+    justify-content: center;
+    align-items: center;
 }
 
 .aboutImg>img {
@@ -251,17 +257,22 @@ a {
 }
 
 /* cetificate */
+#certificates {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .certihead {
-    height: 10%;
     text-align: center;
 }
 
 .certihead>h1 {
-    padding: 2%;
+    padding: 7% 0%;
+    width: max-content;
 }
 
 .certiBox {
-    height: 85%;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -269,15 +280,18 @@ a {
 }
 
 .certiFicate {
-    height: 70vh;
-    width: 50%;
+    aspect-ratio: 4 / 3;
+    width: 53%;
     overflow: hidden;
     justify-content: center;
+    align-items: center;
 }
 
 .certi {
+    display: flex;
+    align-items: center;
     position: absolute;
-    height: 70vh;
+    height: max-content;
     width: max-content;
     opacity: 0;
     transform: scale(0.9);
@@ -294,7 +308,8 @@ a {
 }
 
 .certi>img {
-    height: inherit;
+    height: auto;
+    width: 50vw;
     border-radius: inherit;
 }
 
@@ -302,7 +317,6 @@ a {
     height: 17vh;
     width: 4vw;
     text-align: center;
-    margin: 3rem;
     background: rgb(255, 255, 255, 0.3);
     align-items: center;
 }
@@ -336,7 +350,7 @@ a {
 }
 
 .proJects {
-    height: 36vh;
+    height: max-content;
     width: max-content;
     background-color: #a2a6b6;
     margin: 0 5rem 0rem;
@@ -351,13 +365,12 @@ a {
 }
 
 .projImg {
-    height: 30vh;
     width: max-content;
     border-radius: 1rem 1rem 0 0;
 }
 
 .projImg>img {
-    height: inherit;
+    width: 25vw;
     border-radius: inherit;
 }
 
@@ -367,7 +380,7 @@ a {
 }
 
 .projDesc>p {
-    padding: 0.2rem;
+    padding: 0.5rem;
     font-size: unset;
 }
 
@@ -386,8 +399,6 @@ a {
 }
 
 .projectView {
-    height: 90vh;
-    width: max-content;
     background-color: #a2a6b6;
     border-radius: 1rem;
 }
@@ -420,10 +431,10 @@ a {
     height: 6vh;
 }
 
-/* contact */
+/* connect */
 
 #footer {
-    height: 50vh;
+    height: 40vh;
     background: rgb(0, 0, 0, 0.8);
     margin-top: 0.3rem;
     flex-wrap: wrap;
@@ -432,32 +443,32 @@ a {
 
 .connect {
     width: 100%;
-    height: 85%;
-    margin-left: 4rem;
+    height: 75%;
+    margin-left: 3vw;
 }
 
 .connectHead {
-    margin: 2rem;
+    margin: 2rem 2rem 1rem;
 }
 
 .connectHead>h1 {
-    font-size: 3.5rem;
     color: #fffbff;
 }
 
 .Social>div {
-    height: 7vh;
+    height: max-content;
     display: flex;
-    margin: 2rem;
+    margin: 0.5rem 2rem;
     text-align: center;
+    align-items: center;
 }
 
 .Social>div>img {
-    height: inherit;
+    width: 3vw;
 }
 
 .Social>div>a {
-    font-size: 2rem;
+    font-size: clamp(0.9rem, 1.4vw, 1.4rem);
     margin: 0.61rem;
     color: #999999;
     transition: color 0.5s ease 0s;
@@ -474,8 +485,9 @@ a {
 }
 
 .footr>p {
-    margin: 1rem 0rem;
+    line-height: 3rem;
     color: #999999;
+    font-size: unset;
 }
 
 /* transitions */

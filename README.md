@@ -10,7 +10,6 @@ I'm Om Patil, a Computer Engineering student passionate about building intuitive
 ## 🌐 Live Website
 
 🔗 [Visit My Portfolio](https://om-patil25.github.io/Portfolio-Website/)  
-*(Replace this with your actual deployed link)*
 
 ## 📁 Features
 
@@ -32,14 +31,6 @@ I'm Om Patil, a Computer Engineering student passionate about building intuitive
 - Basic Debugging and Console Logging
 - Problem Solving
 
-## 🚀 Getting Started
-
-To run this project locally:
-
-```bash
-git clone https://github.com/om-patil25/Portfolio-Website.git
-cd Portfolio-Website
-
 ## 📬 Contact
 
 You can connect with me via:
@@ -50,3 +41,12 @@ You can connect with me via:
 ---
 
 🖤 Thank you for checking out my portfolio! Feedback is always welcome.
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+```bash
+git clone https://github.com/om-patil25/Portfolio-Website.git
+cd Portfolio-Website
+
