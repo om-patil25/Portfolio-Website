@@ -1,0 +1,215 @@
+@media screen and (max-width: 600px) {
+
+    /* Layout adjustments */
+    .flex {
+        flex-direction: column;
+    }
+
+    /* Navbar */
+    .navBar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav {
+        display: flex;
+        width: max-content;
+        height: 100%;
+        align-items: center;
+    }
+
+    .logo {
+        width: max-content;
+    }
+
+    .logo>h1 {
+        padding: 0rem 1rem;
+        line-height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        display: block;
+        width: 15vw;
+        padding: 0rem 1rem
+    }
+
+    .collapseMenu {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        background: rgb(0, 0, 0, 0.3);
+        transition: height 0.5s ease 0s;
+    }
+
+    .collapseMenu.toggle {
+        height: 22vh;
+    }
+
+    .collapseMenu>ul {
+        height: inherit;
+        text-align: center;
+    }
+
+    .collapseMenu>ul>li {
+        padding: 0.5rem 1rem;
+        /* font-size: 1.2rem; */
+        font-size: clamp(1rem, 1.1vw, 1.2rem);
+    }
+
+    .nav>ul {
+        display: none;
+    }
+
+
+
+    /* Home  */
+    .welcBox {
+        height: 40vh;
+        width: 100%;
+    }
+
+    .Hi {
+        align-items: center;
+    }
+
+    .Hi>* {
+        margin: 0;
+    }
+
+    .welcBox>h1 {
+        font-size: clamp(1rem, 15vw, 8rem);
+    }
+
+    .welcBox>p {
+        font-size: 0.7rem;
+        width: 57%;
+    }
+
+    .terminal {
+        width: 75vw;
+        box-shadow: 0.7rem 0.7rem 1rem black;
+    }
+
+    .scroll_up {
+        width: 10vw;
+        bottom: 2rem;
+    }
+
+    /* About */
+    #about {
+        flex-wrap: nowrap;
+        height: max-content;
+    }
+
+    .aboutHead,
+    .aboutContent,
+    .aboutImg {
+        width: 100%;
+    }
+
+    .aboutContent {
+        padding: 1rem;
+    }
+
+    .aboutContent>p {
+        line-height: normal;
+        padding: 1rem 1rem;
+    }
+
+    .aboutImg>img {
+        width: 85vw;
+    }
+
+    /* Certificates */
+    #certificates {
+        height: max-content;
+    }
+
+    .certiBox {
+        flex-direction: row;
+        margin-bottom: 2rem;
+    }
+
+    .certiFicate {
+        width: 80%;
+    }
+
+    .certi {
+        border-radius: 0.5rem;
+    }
+
+    .certi>img {
+        width: 75vw;
+    }
+
+    .certiNav {
+        justify-content: center;
+    }
+
+    /* Projects */
+    #projects {
+        height: max-content;
+    }
+
+    .proj_head {
+        height: max-content;
+    }
+
+    .projBox {
+        flex-wrap: nowrap;
+        align-items: center;
+        height: max-content;
+        overflow-y: scroll;
+    }
+
+    .proJects {
+        margin: 1rem 0rem;
+    }
+
+    .projImg>img {
+        width: 70vw;
+    }
+
+    .projDesc {
+        width: auto;
+    }
+
+    /* projectviewer */
+    .projVImg {
+        height: max-content;
+        width: max-content;
+    }
+
+    .projVImg>img {
+        width: 90vw;
+    }
+
+    .projVDesc>p {
+        font-size: unset;
+    }
+
+
+    /* connect */
+    #footer {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .connectHead {
+        margin: 1rem 2rem 1rem;
+    }
+
+    .Social>div>img {
+        width: 6vw;
+    }
+
+    .Social>div>a {
+        font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+    }
+
+    .footr>p {
+        font-size: 0.8rem;
+    }
+}

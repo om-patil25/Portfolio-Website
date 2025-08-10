@@ -92,6 +92,14 @@ a {
     text-shadow: 1px 1px black;
 }
 
+.menu {
+    display: none;
+}
+
+.collapseMenu {
+    display: none;
+}
+
 /* home */
 
 #welcome {
@@ -253,7 +261,7 @@ a {
 }
 
 .aboutImg>img {
-    height: 43vh;
+    width: 35vw;
 }
 
 /* cetificate */

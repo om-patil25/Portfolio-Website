@@ -125,4 +125,27 @@ projects.forEach(proj => {
 //close project
 document.querySelector(".closePreview").addEventListener("click", () => {
     projView.style.display = "none";
-})
+});
+
+//js for mobile 
+let collapseMenu = document.querySelector(".collapseMenu");
+let menu = document.querySelector(".menu");
+
+let checkToggle = () => {
+    if (collapseMenu.classList.contains("toggle") == true) {
+        menu.setAttribute("src", "imgs/icons8-close.svg");
+    } else {
+        menu.setAttribute("src", "imgs/icons8-hamburger-menu.svg")
+    }
+}
+menu.addEventListener("click", () => {
+    collapseMenu.classList.toggle("toggle");
+    collapseMenu.querySelectorAll("ul li").forEach(elem => {
+        elem.addEventListener("click", () => {
+            collapseMenu.classList.remove("toggle");
+            menu.setAttribute("src", "imgs/icons8-hamburger-menu.svg")
+        })
+    });
+    checkToggle();
+});
+

@@ -7,13 +7,20 @@
     <title>Om Patil | Comp. Engg. Student (B.E.) | Aspiring Software Engineer | Passionate About DSA & Web Development
     </title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="phone.css">
     <link rel="stylesheet" href="style1.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="phone.css" media="screen and (max-width: 600px)">
 </head>
 
 <body>
+    <div class="collapseMenu">
+        <ul class="flex">
+            <li><a class="nav_elems" href="#about">About</a></li>
+            <li><a class="nav_elems" href="#certificates">Certificates</a></li>
+            <li><a class="nav_elems" href="#projects">Projects</a></li>
+            <li><a class="nav_elems" href="#footer">Connect</a></li>
+        </ul>
+    </div>
     <nav class="navBar flex">
         <div class="logo">
             <h1>Om Patil</h1>
@@ -25,6 +32,7 @@
                 <li><a class="nav_elems" href="#projects">Projects</a></li>
                 <li><a class="nav_elems" href="#footer">Connect</a></li>
             </ul>
+            <img class="menu" src="imgs/icons8-hamburger-menu.svg" alt="menu">
         </div>
     </nav>
     <div id="welcome" class="flex">
