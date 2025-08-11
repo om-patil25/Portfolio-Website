@@ -35,7 +35,8 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: "Roboto Slab", serif;
 
 }
 
@@ -392,6 +393,10 @@ a {
     font-size: unset;
 }
 
+.projDesc>p>a {
+    color: unset;
+}
+
 /* projecViewer */
 .projPreview {
     height: 100%;
@@ -412,13 +417,13 @@ a {
 }
 
 .projVImg {
-    height: 75vh;
+    height: max-content;
     width: max-content;
     border-radius: 1rem 1rem 0 0;
 }
 
 .projVImg>img {
-    height: inherit;
+    width: 65vw;
     border-radius: inherit;
 }
 
@@ -524,4 +529,49 @@ a {
 .show {
     transform: translate(0rem);
     opacity: 1;
+}
+
+
+/* tablets */
+@media screen and (min-width: 601px) and (max-width: 923px) {
+    #about {
+        align-items: center;
+        height: max-content;
+    }
+
+    .aboutContent {
+        padding: 0;
+    }
+
+    .aboutImg>img {
+        width: 65vw;
+    }
+
+    .certiFicate {
+        width: 75%;
+    }
+
+    .certi>img {
+        width: 70vw;
+    }
+
+    #projects {
+        height: max-content;
+    }
+
+    .proJects {
+        margin: 2rem;
+    }
+
+    .projImg>img {
+        width: 60vw;
+    }
+
+    .projVImg>img {
+        width: 80vw;
+    }
+
+    .scroll_up {
+        width: 5vw;
+    }
 }

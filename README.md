@@ -14,13 +14,15 @@ I'm Om Patil, a Computer Engineering student passionate about building intuitive
 ## 📁 Features
 
 - 💻 Clean and modern UI
+- 📱 Fully responsive — works seamlessly on desktops, tablets, and mobile devices
 - 🎯 Project showcase with interactive previews
 - 🧠 "About Me" section introducing my background and interests
 - 🔗 "Let's Connect" section with GitHub and LinkedIn links
 
 ## 🛠️ Current Status
 
-🚧 The site is fully functional on desktop screens. Responsiveness for tablets and mobile devices is currently being worked on.
+✅ The site is fully functional and fully responsive across desktop, tablet, and mobile devices.  
+🔄 Future improvements and updates will be made as needed.
 
 ## 🧠 Skills
 

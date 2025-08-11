@@ -20,27 +20,30 @@
 
     .logo {
         width: max-content;
+        display: flex;
+        align-items: center;
     }
 
     .logo>h1 {
         padding: 0rem 1rem;
-        line-height: 4rem;
         font-size: 1.5rem;
     }
 
     .menu {
         display: block;
-        width: 15vw;
-        padding: 0rem 1rem
+        width: clamp(1rem, 15vw, 4em);
+        padding: 0rem 1rem;
     }
 
     .collapseMenu {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         overflow: hidden;
         height: 0;
         background: rgb(0, 0, 0, 0.3);
-        transition: height 0.5s ease 0s;
+        transition: height 0.2s ease 0s;
     }
 
     .collapseMenu.toggle {
@@ -48,7 +51,6 @@
     }
 
     .collapseMenu>ul {
-        height: inherit;
         text-align: center;
     }
 
@@ -72,6 +74,7 @@
 
     .Hi {
         align-items: center;
+        order: 1;
     }
 
     .Hi>* {
@@ -87,9 +90,22 @@
         width: 57%;
     }
 
+    .terminalBox {
+        order: 2;
+    }
+
     .terminal {
         width: 75vw;
         box-shadow: 0.7rem 0.7rem 1rem black;
+    }
+
+    .scroll_down {
+        order: 3;
+    }
+
+    .scroll_down>img {
+        height: auto;
+        width: 10vw;
     }
 
     .scroll_up {
