@@ -1,100 +1,112 @@
 //on Name
 document.querySelector(".logo").addEventListener("click", () => {
-    location.reload();
+  location.reload();
 });
 
 //transitions while first time scroll
 const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            observer.unobserve(entry.target);
-        }
-    });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    }
+  });
 });
 
 const fadeUp = document.querySelectorAll(".fadeUp");
-fadeUp.forEach(fade => {
-    observer.observe(fade);
+fadeUp.forEach((fade) => {
+  observer.observe(fade);
 });
 
 const slideRight = document.querySelectorAll(".slideRight");
-slideRight.forEach(slideR => {
-    observer.observe(slideR);
+slideRight.forEach((slideR) => {
+  observer.observe(slideR);
 });
 
 const slideLeft = document.querySelectorAll(".slideLeft");
-slideLeft.forEach(slideL => {
-    observer.observe(slideL);
+slideLeft.forEach((slideL) => {
+  observer.observe(slideL);
 });
 
 //click on scroll down
 document.querySelector(".scroll_down").addEventListener("click", () => {
-    document.querySelector("#about").scrollIntoView({
-        behavior: "smooth"
-    });
+  document.querySelector("#about").scrollIntoView({
+    behavior: "smooth",
+  });
 });
 
 //scroll up
 const scroll_up = document.querySelector(".scroll_up");
 document.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
-        scroll_up.style.display = "block";
-    } else {
-        scroll_up.style.display = "none";
-    }
+  if (window.scrollY > 400) {
+    scroll_up.style.display = "block";
+  } else {
+    scroll_up.style.display = "none";
+  }
 });
 
 //click on scroll_up
 scroll_up.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
 
-//certificate nav 
+//certificate nav
 const certificate = document.querySelectorAll(".certi");
 let currentCerti = 0;
 console.log(certificate);
 
 let showNextCerti = () => {
-    certificate[currentCerti].classList.remove("active");
-    console.log("right");
-    currentCerti = (currentCerti + 1) % certificate.length;
-    certificate[currentCerti].classList.add("active");
-}
+  certificate[currentCerti].classList.remove("active");
+  console.log("right");
+  currentCerti = (currentCerti + 1) % certificate.length;
+  certificate[currentCerti].classList.add("active");
+};
 
 document.querySelector(".right").addEventListener("click", () => {
-    showNextCerti();
+  showNextCerti();
 });
 
 let showPrevCerti = () => {
-    certificate[currentCerti].classList.remove("active");
-    console.log("left");
-    currentCerti = (currentCerti - 1 + certificate.length) % certificate.length;
-    console.log(currentCerti);
-    certificate[currentCerti].classList.add("active");
-
-}
+  certificate[currentCerti].classList.remove("active");
+  console.log("left");
+  currentCerti = (currentCerti - 1 + certificate.length) % certificate.length;
+  console.log(currentCerti);
+  certificate[currentCerti].classList.add("active");
+};
 
 document.querySelector(".left").addEventListener("click", () => {
-    showPrevCerti();
+  showPrevCerti();
 });
 
 //automating ceti
 setInterval(() => {
-    showNextCerti();
+  showNextCerti();
 }, 4000);
 
 //certificate verification
 document.getElementById("certiHCJ").addEventListener("click", () => {
-    window.open("https://codesignal.com/learn/certificates/cmciqx9ul003yi604kfri3ym0/courses/60", "_blank");
+  window.open(
+    "https://codesignal.com/learn/certificates/cmciqx9ul003yi604kfri3ym0/courses/60",
+    "_blank",
+  );
 });
 
 document.getElementById("certiJs").addEventListener("click", () => {
-    window.open("https://codesignal.com/learn/certificates/cmciqx9ul003yi604kfri3ym0/courses/59", "_blank");
-})
+  window.open(
+    "https://codesignal.com/learn/certificates/cmciqx9ul003yi604kfri3ym0/courses/59",
+    "_blank",
+  );
+});
+
+document.getElementById("certiReact").addEventListener("click", () => {
+  window.open(
+    "https://codesignal.com/learn/certificates/cmciqx9ul003yi604kfri3ym0/courses/61",
+    "_blank",
+  );
+});
 
 //projectViewer
 let projView = document.querySelector(".projPreview");
@@ -104,48 +116,47 @@ let projects = document.querySelectorAll(".proJects");
 let imgElem;
 let DescElem;
 
-projects.forEach(proj => {
-    proj.addEventListener("click", () => {
-        projView.style.display = "flex";
+projects.forEach((proj) => {
+  proj.addEventListener("click", () => {
+    projView.style.display = "flex";
 
-        imgElem = proj.querySelector(".projImg img").getAttribute("src");
+    imgElem = proj.querySelector(".projImg img").getAttribute("src");
 
-        DescElem = proj.querySelector("p").innerHTML;
-        console.log(imgElem);
-        projView.querySelector(".projVImg img").setAttribute("src", imgElem);
-
-        projView.querySelector(".projVDesc p").innerHTML = DescElem;
-
-        console.log(projView);
-
-
+    DescElem = proj.querySelector(".projDesc").innerHTML;
+    console.log(imgElem);
+    projView.querySelector(".projVImg img").setAttribute("src", imgElem);
+    projView.querySelector(".projVDesc").innerHTML = DescElem;
+    projBtns = proj.querySelectorAll(".projBtns");
+    projBtns.forEach((btn) => {
+      btn.style.display = "flex";
+      projView.querySelector(".projVDesc").innerHTML += btn.outerHTML;
+      //close project
+      document.querySelector(".closePreview").addEventListener("click", () => {
+        projView.style.display = "none";
+        btn.style.display = "none";
+      });
     });
+  });
 });
 
-//close project
-document.querySelector(".closePreview").addEventListener("click", () => {
-    projView.style.display = "none";
-});
-
-//js for mobile 
+//js for mobile
 let collapseMenu = document.querySelector(".collapseMenu");
 let menu = document.querySelector(".menu");
 
 let checkToggle = () => {
-    if (collapseMenu.classList.contains("toggle") == true) {
-        menu.setAttribute("src", "imgs/icons8-close.svg");
-    } else {
-        menu.setAttribute("src", "imgs/icons8-hamburger-menu.svg")
-    }
-}
+  if (collapseMenu.classList.contains("toggle") == true) {
+    menu.setAttribute("src", "imgs/icons8-close.svg");
+  } else {
+    menu.setAttribute("src", "imgs/icons8-hamburger-menu.svg");
+  }
+};
 menu.addEventListener("click", () => {
-    collapseMenu.classList.toggle("toggle");
-    collapseMenu.querySelectorAll("ul li").forEach(elem => {
-        elem.addEventListener("click", () => {
-            collapseMenu.classList.remove("toggle");
-            menu.setAttribute("src", "imgs/icons8-hamburger-menu.svg")
-        })
+  collapseMenu.classList.toggle("toggle");
+  collapseMenu.querySelectorAll("ul li").forEach((elem) => {
+    elem.addEventListener("click", () => {
+      collapseMenu.classList.remove("toggle");
+      menu.setAttribute("src", "imgs/icons8-hamburger-menu.svg");
     });
-    checkToggle();
+  });
+  checkToggle();
 });
-

@@ -1,231 +1,229 @@
 @media screen and (max-width: 600px) {
+  /* Layout adjustments */
+  .flex {
+    flex-direction: column;
+  }
 
-    /* Layout adjustments */
-    .flex {
-        flex-direction: column;
-    }
+  /* Navbar */
+  .navBar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    /* Navbar */
-    .navBar {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  .nav {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    align-items: center;
+  }
 
-    .nav {
-        display: flex;
-        width: max-content;
-        height: 100%;
-        align-items: center;
-    }
+  .logo {
+    width: max-content;
+    display: flex;
+    align-items: center;
+  }
 
-    .logo {
-        width: max-content;
-        display: flex;
-        align-items: center;
-    }
+  .logo > h1 {
+    padding: 0rem 1rem;
+    font-size: 1.5rem;
+  }
 
-    .logo>h1 {
-        padding: 0rem 1rem;
-        font-size: 1.5rem;
-    }
+  .menu {
+    display: block;
+    width: clamp(1rem, 15vw, 4em);
+    padding: 0rem 1rem;
+  }
 
-    .menu {
-        display: block;
-        width: clamp(1rem, 15vw, 4em);
-        padding: 0rem 1rem;
-    }
+  .collapseMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    background: rgb(0, 0, 0, 0.3);
+    transition: height 0.2s ease 0s;
+  }
 
-    .collapseMenu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        overflow: hidden;
-        height: 0;
-        background: rgb(0, 0, 0, 0.3);
-        transition: height 0.2s ease 0s;
-    }
+  .collapseMenu.toggle {
+    height: 22vh;
+  }
 
-    .collapseMenu.toggle {
-        height: 22vh;
-    }
+  .collapseMenu > ul {
+    text-align: center;
+  }
 
-    .collapseMenu>ul {
-        text-align: center;
-    }
+  .collapseMenu > ul > li {
+    padding: 0.5rem 1rem;
+    /* font-size: 1.2rem; */
+    font-size: clamp(1rem, 1.1vw, 1.2rem);
+  }
 
-    .collapseMenu>ul>li {
-        padding: 0.5rem 1rem;
-        /* font-size: 1.2rem; */
-        font-size: clamp(1rem, 1.1vw, 1.2rem);
-    }
+  .nav > ul {
+    display: none;
+  }
 
-    .nav>ul {
-        display: none;
-    }
+  /* Home  */
+  .welcBox {
+    height: 40vh;
+    width: 100%;
+  }
 
+  .Hi {
+    align-items: center;
+    order: 1;
+  }
 
+  .Hi > * {
+    margin: 0;
+  }
 
-    /* Home  */
-    .welcBox {
-        height: 40vh;
-        width: 100%;
-    }
+  .welcBox > h1 {
+    font-size: clamp(1rem, 17vw, 8rem);
+  }
 
-    .Hi {
-        align-items: center;
-        order: 1;
-    }
+  .welcBox > p {
+    font-size: 0.7rem;
+    width: 67%;
+  }
 
-    .Hi>* {
-        margin: 0;
-    }
+  .terminalBox {
+    order: 2;
+  }
 
-    .welcBox>h1 {
-        font-size: clamp(1rem, 15vw, 8rem);
-    }
+  .terminal {
+    width: 75vw;
+    box-shadow: 0.7rem 0.7rem 1rem black;
+  }
 
-    .welcBox>p {
-        font-size: 0.7rem;
-        width: 57%;
-    }
+  .scroll_down {
+    order: 3;
+  }
 
-    .terminalBox {
-        order: 2;
-    }
+  .scroll_down > img {
+    height: auto;
+    width: 10vw;
+  }
 
-    .terminal {
-        width: 75vw;
-        box-shadow: 0.7rem 0.7rem 1rem black;
-    }
+  .scroll_up {
+    width: 10vw;
+    bottom: 2rem;
+  }
 
-    .scroll_down {
-        order: 3;
-    }
+  /* About */
+  #about {
+    flex-wrap: nowrap;
+    height: max-content;
+  }
 
-    .scroll_down>img {
-        height: auto;
-        width: 10vw;
-    }
+  .aboutHead,
+  .aboutContent,
+  .aboutImg {
+    width: 100%;
+  }
 
-    .scroll_up {
-        width: 10vw;
-        bottom: 2rem;
-    }
+  .aboutContent {
+    padding: 1rem;
+  }
 
-    /* About */
-    #about {
-        flex-wrap: nowrap;
-        height: max-content;
-    }
+  .aboutContent > p {
+    line-height: normal;
+    padding: 1rem 1rem;
+  }
 
-    .aboutHead,
-    .aboutContent,
-    .aboutImg {
-        width: 100%;
-    }
+  .aboutImg > img {
+    width: 85vw;
+  }
 
-    .aboutContent {
-        padding: 1rem;
-    }
+  /* Certificates */
+  #certificates {
+    height: max-content;
+  }
 
-    .aboutContent>p {
-        line-height: normal;
-        padding: 1rem 1rem;
-    }
+  .certiBox {
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
 
-    .aboutImg>img {
-        width: 85vw;
-    }
+  .certiFicate {
+    width: 80%;
+  }
 
-    /* Certificates */
-    #certificates {
-        height: max-content;
-    }
+  .certi {
+    border-radius: 0.5rem;
+  }
 
-    .certiBox {
-        flex-direction: row;
-        margin-bottom: 2rem;
-    }
+  .certi > img {
+    width: 75vw;
+  }
 
-    .certiFicate {
-        width: 80%;
-    }
+  .certiNav {
+    justify-content: center;
+  }
 
-    .certi {
-        border-radius: 0.5rem;
-    }
+  /* Projects */
+  #projects {
+    height: max-content;
+  }
 
-    .certi>img {
-        width: 75vw;
-    }
+  .proj_head {
+    height: max-content;
+  }
 
-    .certiNav {
-        justify-content: center;
-    }
+  .projBox {
+    flex-wrap: nowrap;
+    align-items: center;
+    height: max-content;
+    overflow-y: scroll;
+  }
 
-    /* Projects */
-    #projects {
-        height: max-content;
-    }
+  .proJects {
+    margin: 1rem 0rem;
+  }
 
-    .proj_head {
-        height: max-content;
-    }
+  .projImg > img {
+    width: 80vw;
+  }
 
-    .projBox {
-        flex-wrap: nowrap;
-        align-items: center;
-        height: max-content;
-        overflow-y: scroll;
-    }
+  .projDesc {
+    white-space: nowrap;
+    max-width: 80vw;
+  }
 
-    .proJects {
-        margin: 1rem 0rem;
-    }
+  /* projectviewer */
+  .projVImg img {
+    width: 95vw;
+    border-radius: 1rem 1rem 0rem 0rem;
+  }
 
-    .projImg>img {
-        width: 70vw;
-    }
+  .projVDesc {
+    max-width: 95vw;
+    position: relative;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
 
-    .projDesc {
-        width: auto;
-    }
+  /* connect */
+  #footer {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
 
-    /* projectviewer */
-    .projVImg {
-        height: max-content;
-        width: max-content;
-    }
+  .connectHead {
+    margin: 1rem 2rem 1rem;
+  }
 
-    .projVImg>img {
-        width: 90vw;
-    }
+  .Social > div > img {
+    width: 6vw;
+  }
 
-    .projVDesc>p {
-        font-size: unset;
-    }
+  .Social > div > a {
+    font-size: clamp(1.2rem, 1.4vw, 1.4rem);
+  }
 
-
-    /* connect */
-    #footer {
-        flex-wrap: nowrap;
-        align-items: center;
-    }
-
-    .connectHead {
-        margin: 1rem 2rem 1rem;
-    }
-
-    .Social>div>img {
-        width: 6vw;
-    }
-
-    .Social>div>a {
-        font-size: clamp(1.2rem, 1.4vw, 1.4rem);
-    }
-
-    .footr>p {
-        font-size: 0.8rem;
-    }
+  .footr > p {
+    font-size: 0.8rem;
+  }
 }
